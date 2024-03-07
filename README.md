@@ -98,7 +98,9 @@ I've been experimenting with options to help with Bluetooth errors, here are a f
 
 - Run `sudo systemctl disable bluetooth` and `sudo reboot`
 
-As noted in the [Bleno](https://github.com/abandonware/bleno?tab=readme-ov-file#linux) README. After rebooting, BridgeX seems to re-enable Bluetooth but the error stopped occuring 🤷. Also, sometimes you don't need to reboot - only if you're noticing the Noble scanner to unendingly loop or obviously the segfault mentioned prior.
+As noted in the [Bleno](https://github.com/abandonware/bleno?tab=readme-ov-file#linux) README. After rebooting, BridgeX seems to re-enable Bluetooth but the error stopped occuring 🤷
+
+Also, sometimes you don't need to reboot - only if you're noticing the Noble scanner to unendingly loop in which case you can simply run `sudo systemctl stop xyo-bridge; sudo systemctl stop bluetooth; sudo systemctl start xyo-bridge` and wait a few minutes then run `sudo systemctl start bluetooth`
 
 ## NVM / sudo / sudoless
 
